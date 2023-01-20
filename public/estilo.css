@@ -159,8 +159,7 @@ html {
 
 #sobremi .contenedor-foto img {
     padding: 20px;
-    width: 150%;
-    height: 100%;
+    width: 35vh;
     border-radius: 20px;
     background-color: rgba(169, 169, 169, 0.412);
 }
