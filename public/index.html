@@ -1,43 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>RSG Desarrollador Web</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- ID PARTICULAS.JS -->
+    <div id="particles-js"></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
+      <div class="contenido">
+        <header>
+          <div class="contenido-header">
+            <h1>/RSG/</h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li>
+                  <a
+                    href="#inicio"
+                    class="seleccionado"
+                    onclick="seleccionar(this)"
+                    >INICIO</a
+                  >
+                </li>
+                <li>
+                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+                </li>
+                <li>
+                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+                </li>
+                <li>
+                  <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
+                </li>
+                <li>
+                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+                </li>
+              </ul>
+            </nav>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="redes">
+              <a href="https://www.linkedin.com/in/ramiro-soaresgache/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/ramisoaresgache"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://wa.me/541157399999?"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </header>
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>
+            Soy <span>Ramiro Soares Gache</span>, Desarrollador FullStack y
+            Diseñador UX/UI
+          </h2>
+          <p class="descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
+          </p>
+          <a href="#portfolio">Ir a Portafolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="img/foto.jpg" alt="" />
+      </div>
+      <div class="sobremi">
+        <p class="titulo-seccion">Sobre Mi</p>
+        <h2>Hola, Soy <span>Ramiro Soares Gache</span></h2>
+        <h3>Desarrollador FullStack y Diseñador UX/UI</h3>
+        <p>
+          Construyo aplicaciones web,desde el modelado de sus datos y la
+          implementación del backend (servidor), hasta el desarrollo e
+          implementación del frontend, incluyendo su diseño, UX y UI. Soy
+          apasionado por las tecnologías web y por cómo Internet interconecta a
+          las personas y a los negocios alrededor del mundo y me encantaría
+          combinar mis habilidades de desarrollo de software con mi experiencia
+          previa en startups y operaciones para continuar contribuyendo al
+          desarrollo de mi región.
+        </p>
+        <a href="img/CV.pdf">Descargar CV</a>
+      </div>
+    </section>
+
+    <!-- SECCION S E R V I C I O S -->
+    <section id="servicios">
+      <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"> <i class="fa-solid fa-palette"></i></span>
+          <h4>Diseño de Sitios Web</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Diseño</li>
+            <li>Front</li>
+            <li>Back</li>
+          </ul>
+          <p>
+            Diseño centrado en el usuario, con una estructura fácil de usar e
+            interacciones significativas.Diseño de Experiencia de Usuario (UX)
+            Diseño Web y Móvil Patrones de diseño responsivo y
+            adaptable,maquetado y prototipado
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-code"></i></span>
+          <h4>Porgramación Front End</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Diseño</li>
+            <li>Front</li>
+            <li>Back</li>
+          </ul>
+          <p>
+            Aplicaciones y sitios web responsivos y adaptables, accesibles,
+            dinámicos, rápidos y escalables.
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-database"></i></span>
+          <h4>Programación Back End</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Diseño</li>
+            <li>Front</li>
+            <li>Back</li>
+          </ul>
+          <p>
+            Lógica de negocio fiable, gestión de datos eficiente y APIs
+            efectivas para su consumo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION H A B I L I D A D E S -->
+    <div class="contenedor-skills" id="skills">
+      <h3>HABILIDADES</h3>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Front End</p>
+          <span class="porcentaje">95%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="fd"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Back End</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="bd"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Diseño</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="do"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Profesional Skills</p>
+          <span class="porcentaje">85%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="cn"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+      <h3 class="titulo-seccion">Mis Proyectos</h3>
+      <div class="fila">
+        <div class="proyecto">
+          <a href="https://github.com/ramisoaresgache/PokemonPI">
+            <div class="overlay"></div>
+            <img src="img/proyecto1.jpg" alt="" />
+            <div class="info">
+              <h4>Descripcion Proyecto</h4>
+              <p>Diseño Web</p>
+            </div>
+          </a>
+        </div>
+        <!-- <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="img/proyecto2.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="img/proyecto3.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- SECCTION C O N T A C T O -->
+    <section id="contacto">
+      <h3 class="titulo-seccion">Contactame</h3>
+      <div class="contenedor-form">
+        <form>
+          <div class="fila mitad">
+            <input
+              id="nombreCompleto"
+              type="text"
+              placeholder="Nombre Completo *"
+              class="input-mitad"
+            />
+            <input
+              id="email"
+              type="email"
+              placeholder="Dirección de Email"
+              class="input-mitad"
+            />
+          </div>
+          <div class="fila">
+            <input
+              id="tema"
+              type="text"
+              placeholder="Tema..."
+              class="input-full"
+            />
+          </div>
+          <div class="fila">
+            <textarea
+              name=""
+              id="textarea"
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+            ></textarea>
+          </div>
+          <input
+            id="btnEnviar"
+            type="submit"
+            value="Enviar Mensaje"
+            class="btn-enviar"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- SECCION FOOTER -->
+    <footer>
+      <p>Todos los derechos reservados</p>
+      <div class="redes">
+        <a href="https://www.linkedin.com/in/ramiro-soaresgache/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/ramisoaresgache"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://wa.me/541157399999?"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- SECCION PARTICULAS -->
+
+    <script src="particles.min.js"></script>
+    <!-- ENVIO MAIL-->
+    <script>
+      const botonEnvio = document.getElementById("btnEnviar");
+      botonEnvio.addEventListener("click", function (e) {
+        e.preventDefault();
+        const nombreCompleto = document.getElementById("nombreCompleto").value;
+        const email = document.getElementById("email").value;
+        const tema = document.getElementById("tema").value;
+        const textarea = document.getElementById("textarea").value;
+        window.location.href = `mailto:ramisoaresgache@hotmail.com?subject=enviodesdeportfolio&body=${nombreCompleto}&body=${email}&body=${tema}&body=${textarea}`;
+      });
+    </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
