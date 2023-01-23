@@ -356,10 +356,12 @@
         const email = document.getElementById("email").value;
         const tema = document.getElementById("tema").value;
         const textarea = document.getElementById("textarea").value;
-        window.location.href = `mailto:ramisoaresgache@hotmail.com?subject=${tema}=${nombreCompleto}&body=${email}&body=${tema}&body=${textarea}`;
+        window.location.href = `mailto:ramisoaresgache@hotmail.com?subject=${tema}&body=Nombre: ${nombreCompleto}%0AEmail: ${email}%0ATema: ${tema}%0AMensaje: ${textarea}`;
       });
     </script>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
